@@ -1,0 +1,1829 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "pl-PL",
+    "dataSources": [
+      {
+        "name": "SqlServer 194.29.170.4 ABD_GR06_DW",
+        "connectionString": "Provider=SQLOLEDB;Data Source=194.29.170.4;User ID=ABDGR06;Persist Security Info=true;Initial Catalog=ABD_GR06_DW",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "DimAtrakcja",
+        "columns": [
+          {
+            "name": "ID_Atrakcji",
+            "dataType": "int64",
+            "sourceColumn": "ID_Atrakcji",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_AtrakcjiT",
+            "dataType": "int64",
+            "sourceColumn": "ID_AtrakcjiT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nazwa",
+            "dataType": "string",
+            "sourceColumn": "Nazwa",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Liczba_Miejsc",
+            "dataType": "int64",
+            "sourceColumn": "Liczba_Miejsc",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Czy_Dziecko",
+            "dataType": "string",
+            "sourceColumn": "Czy_Dziecko",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Producent",
+            "dataType": "string",
+            "sourceColumn": "Producent",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Rozmiar",
+            "dataType": "int64",
+            "sourceColumn": "Rozmiar",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataModyfikacji",
+            "dataType": "dateTime",
+            "sourceColumn": "DataModyfikacji",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataOd",
+            "dataType": "dateTime",
+            "sourceColumn": "DataOd",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataDo",
+            "dataType": "dateTime",
+            "sourceColumn": "DataDo",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Aktywny",
+            "dataType": "string",
+            "sourceColumn": "Aktywny",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimAtrakcja",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DimAtrakcja].* FROM [dbo].[DimAtrakcja] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimAtrakcja].* FROM [dbo].[DimAtrakcja] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimAtrakcja"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimBiuro",
+        "columns": [
+          {
+            "name": "ID_Biura",
+            "dataType": "int64",
+            "sourceColumn": "ID_Biura",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_BiuraT",
+            "dataType": "int64",
+            "sourceColumn": "ID_BiuraT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nr_Telefonu",
+            "dataType": "string",
+            "sourceColumn": "Nr_Telefonu",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Ilosc_Pokojow",
+            "dataType": "int64",
+            "sourceColumn": "Ilosc_Pokojow",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Email",
+            "dataType": "string",
+            "sourceColumn": "Email",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "ID_ParkuT",
+            "dataType": "int64",
+            "sourceColumn": "ID_ParkuT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NazwaParku",
+            "dataType": "string",
+            "sourceColumn": "NazwaParku",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "ID_AdresuT",
+            "dataType": "int64",
+            "sourceColumn": "ID_AdresuT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Miasto",
+            "dataType": "string",
+            "sourceColumn": "Miasto",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Ulica",
+            "dataType": "string",
+            "sourceColumn": "Ulica",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Numer_Lokalu",
+            "dataType": "string",
+            "sourceColumn": "Numer_Lokalu",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataModyfikacji",
+            "dataType": "dateTime",
+            "sourceColumn": "DataModyfikacji",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimBiuro",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DimBiuro].* FROM [dbo].[DimBiuro] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimBiuro].* FROM [dbo].[DimBiuro] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimBiuro"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimCzas",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "DataFullName",
+            "dataType": "dateTime",
+            "isKey": true,
+            "sourceColumn": "DataFullName",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Miesiac",
+            "dataType": "int64",
+            "sourceColumn": "Miesiac",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Kwartal",
+            "dataType": "int64",
+            "sourceColumn": "Kwartal",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Rok",
+            "dataType": "int64",
+            "sourceColumn": "Rok",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DzienTygodnia",
+            "dataType": "int64",
+            "sourceColumn": "DzienTygodnia",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "DzienMiesiaca",
+            "dataType": "int64",
+            "sourceColumn": "DzienMiesiaca",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "NazwaDniaTygodnia",
+            "dataType": "string",
+            "sourceColumn": "NazwaDniaTygodnia",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "NazwaMiesiaca",
+            "dataType": "string",
+            "sourceColumn": "NazwaMiesiaca",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataModyfikacji",
+            "dataType": "dateTime",
+            "sourceColumn": "DataModyfikacji",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimCzas",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DimCzas].[DataFullName],[dbo].[DimCzas].[Miesiac],[dbo].[DimCzas].[Kwartal],[dbo].[DimCzas].[Rok],[dbo].[DimCzas].[DzienTygodnia],[dbo].[DimCzas].[DzienMiesiaca],[dbo].[DimCzas].[NazwaDniaTygodnia],[dbo].[DimCzas].[NazwaMiesiaca],[dbo].[DimCzas].[DataUtworzenia],[dbo].[DimCzas].[DataModyfikacji] FROM [dbo].[DimCzas] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            },
+            "annotations": [
+              {
+                "name": "TableWidgetSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+                  "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+                  "  <ColumnSuggestedType />",
+                  "  <ColumnFormat />",
+                  "  <ColumnAccuracy />",
+                  "  <ColumnCurrencySymbol />",
+                  "  <ColumnPositivePattern />",
+                  "  <ColumnNegativePattern />",
+                  "  <ColumnWidths>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_Daty</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>87</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataFullName</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>118</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Miesiac</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>76</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Kwartal</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>79</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Rok</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>59</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DzienTygodnia</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>125</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DzienMiesiaca</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>116</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>NazwaDniaTygodnia</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>158</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>NazwaMiesiaca</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>122</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataUtworzenia</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>131</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataModyfikacji</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>131</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnWidths>",
+                  "  <ColumnDisplayIndex>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_Daty</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>0</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataFullName</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>1</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Miesiac</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>2</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Kwartal</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>3</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Rok</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>4</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DzienTygodnia</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>5</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DzienMiesiaca</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>6</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>NazwaDniaTygodnia</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>7</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>NazwaMiesiaca</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>8</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataUtworzenia</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>9</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataModyfikacji</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>10</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnDisplayIndex>",
+                  "  <ColumnFrozen />",
+                  "  <ColumnChecked>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_Daty</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>false</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnChecked>",
+                  "  <ColumnFilter />",
+                  "  <SelectionFilter />",
+                  "  <FilterParameters />",
+                  "  <IsSortDescending>false</IsSortDescending>",
+                  "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimCzas].[DataFullName],[dbo].[DimCzas].[Miesiac],[dbo].[DimCzas].[Kwartal],[dbo].[DimCzas].[Rok],[dbo].[DimCzas].[DzienTygodnia],[dbo].[DimCzas].[DzienMiesiaca],[dbo].[DimCzas].[NazwaDniaTygodnia],[dbo].[DimCzas].[NazwaMiesiaca],[dbo].[DimCzas].[DataUtworzenia],[dbo].[DimCzas].[DataModyfikacji] FROM [dbo].[DimCzas] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimCzas"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          },
+          {
+            "name": "TableWidgetSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+              "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+              "  <ColumnSuggestedType />",
+              "  <ColumnFormat />",
+              "  <ColumnAccuracy />",
+              "  <ColumnCurrencySymbol />",
+              "  <ColumnPositivePattern />",
+              "  <ColumnNegativePattern />",
+              "  <ColumnWidths>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_Daty</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>87</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataFullName</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>118</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Miesiac</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>76</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Kwartal</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>79</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Rok</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>59</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DzienTygodnia</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>125</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DzienMiesiaca</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>116</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>NazwaDniaTygodnia</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>158</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>NazwaMiesiaca</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>122</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataUtworzenia</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>131</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataModyfikacji</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>131</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnWidths>",
+              "  <ColumnDisplayIndex>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_Daty</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>0</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataFullName</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>1</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Miesiac</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>2</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Kwartal</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>3</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Rok</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>4</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DzienTygodnia</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>5</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DzienMiesiaca</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>6</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>NazwaDniaTygodnia</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>7</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>NazwaMiesiaca</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>8</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataUtworzenia</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>9</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataModyfikacji</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>10</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnDisplayIndex>",
+              "  <ColumnFrozen />",
+              "  <ColumnChecked>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_Daty</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>false</boolean>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnChecked>",
+              "  <ColumnFilter />",
+              "  <SelectionFilter />",
+              "  <FilterParameters />",
+              "  <IsSortDescending>false</IsSortDescending>",
+              "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DimKlient",
+        "columns": [
+          {
+            "name": "ID_Klienta",
+            "dataType": "int64",
+            "sourceColumn": "ID_Klienta",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_KlientaT",
+            "dataType": "int64",
+            "sourceColumn": "ID_KlientaT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nr_Telefonu",
+            "dataType": "string",
+            "sourceColumn": "Nr_Telefonu",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Email",
+            "dataType": "string",
+            "sourceColumn": "Email",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Plec",
+            "dataType": "string",
+            "sourceColumn": "Plec",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataModyfikacji",
+            "dataType": "dateTime",
+            "sourceColumn": "DataModyfikacji",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataOd",
+            "dataType": "dateTime",
+            "sourceColumn": "DataOd",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataDo",
+            "dataType": "dateTime",
+            "sourceColumn": "DataDo",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Aktywny",
+            "dataType": "string",
+            "sourceColumn": "Aktywny",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DataUrodzenia",
+            "dataType": "string",
+            "sourceColumn": "DataUrodzenia",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimKlient",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DimKlient].* FROM [dbo].[DimKlient] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimKlient].* FROM [dbo].[DimKlient] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimKlient"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimParkRozrywki",
+        "columns": [
+          {
+            "name": "ID_Parku",
+            "dataType": "int64",
+            "sourceColumn": "ID_Parku",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_ParkuT",
+            "dataType": "int64",
+            "sourceColumn": "ID_ParkuT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nazwa",
+            "dataType": "string",
+            "sourceColumn": "Nazwa",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Nr_Telefonu",
+            "dataType": "string",
+            "sourceColumn": "Nr_Telefonu",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Godzina_Otwarcia",
+            "dataType": "double",
+            "sourceColumn": "Godzina_Otwarcia",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Godzina_Zamkniecia",
+            "dataType": "double",
+            "sourceColumn": "Godzina_Zamkniecia",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Email",
+            "dataType": "string",
+            "sourceColumn": "Email",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data_Zalozenia",
+            "dataType": "string",
+            "sourceColumn": "Data_Zalozenia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Miasto",
+            "dataType": "string",
+            "sourceColumn": "Miasto",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Ulica",
+            "dataType": "string",
+            "sourceColumn": "Ulica",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Numer_Lokalu",
+            "dataType": "string",
+            "sourceColumn": "Numer_Lokalu",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Kod_Poczty",
+            "dataType": "string",
+            "sourceColumn": "Kod_Poczty",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Poczta",
+            "dataType": "string",
+            "sourceColumn": "Poczta",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataModyfikacji",
+            "dataType": "dateTime",
+            "sourceColumn": "DataModyfikacji",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimParkRozrywki",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DimParkRozrywki].* FROM [dbo].[DimParkRozrywki] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimParkRozrywki].* FROM [dbo].[DimParkRozrywki] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimParkRozrywki"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimPytania",
+        "columns": [
+          {
+            "name": "ID_Pytania",
+            "dataType": "int64",
+            "sourceColumn": "ID_Pytania",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_PytaniaT",
+            "dataType": "int64",
+            "sourceColumn": "ID_PytaniaT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_AnkietyT",
+            "dataType": "int64",
+            "sourceColumn": "ID_AnkietyT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NazwaAnkiety",
+            "dataType": "string",
+            "sourceColumn": "NazwaAnkiety",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "TrescPytania",
+            "dataType": "string",
+            "sourceColumn": "TrescPytania",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DataRozpoczeciaAnkiety",
+            "dataType": "dateTime",
+            "sourceColumn": "DataRozpoczeciaAnkiety",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataZakonczeniaAnkiety",
+            "dataType": "dateTime",
+            "sourceColumn": "DataZakonczeniaAnkiety",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "TworcaEmail",
+            "dataType": "string",
+            "sourceColumn": "TworcaEmail",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DataModyfikacji",
+            "dataType": "dateTime",
+            "sourceColumn": "DataModyfikacji",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimPytania",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DimPytania].[ID_Pytania],[dbo].[DimPytania].[ID_PytaniaT],[dbo].[DimPytania].[ID_AnkietyT],[dbo].[DimPytania].[NazwaAnkiety],[dbo].[DimPytania].[TrescPytania],[dbo].[DimPytania].[DataRozpoczeciaAnkiety],[dbo].[DimPytania].[DataZakonczeniaAnkiety],[dbo].[DimPytania].[TworcaEmail],[dbo].[DimPytania].[DataUtworzenia],[dbo].[DimPytania].[DataModyfikacji] FROM [dbo].[DimPytania] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            },
+            "annotations": [
+              {
+                "name": "TableWidgetSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+                  "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+                  "  <ColumnSuggestedType />",
+                  "  <ColumnFormat />",
+                  "  <ColumnAccuracy />",
+                  "  <ColumnCurrencySymbol />",
+                  "  <ColumnPositivePattern />",
+                  "  <ColumnNegativePattern />",
+                  "  <ColumnWidths>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_Pytania</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>102</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_PytaniaT</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>110</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_AnkietyT</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>110</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>NazwaAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>119</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>TrescPytania</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>113</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataRozpoczeciaAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>184</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataZakonczeniaAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>184</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>TworcaEmail</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>111</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>OpisAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>106</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataUtworzenia</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>131</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataModyfikacji</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>131</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnWidths>",
+                  "  <ColumnDisplayIndex>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_Pytania</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>0</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_PytaniaT</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>1</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ID_AnkietyT</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>2</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>NazwaAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>3</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>TrescPytania</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>4</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataRozpoczeciaAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>5</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataZakonczeniaAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>6</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>TworcaEmail</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>7</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>OpisAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>8</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataUtworzenia</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>9</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DataModyfikacji</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>10</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnDisplayIndex>",
+                  "  <ColumnFrozen />",
+                  "  <ColumnChecked>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>OpisAnkiety</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>false</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnChecked>",
+                  "  <ColumnFilter />",
+                  "  <SelectionFilter />",
+                  "  <FilterParameters />",
+                  "  <IsSortDescending>false</IsSortDescending>",
+                  "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimPytania].[ID_Pytania],[dbo].[DimPytania].[ID_PytaniaT],[dbo].[DimPytania].[ID_AnkietyT],[dbo].[DimPytania].[NazwaAnkiety],[dbo].[DimPytania].[TrescPytania],[dbo].[DimPytania].[DataRozpoczeciaAnkiety],[dbo].[DimPytania].[DataZakonczeniaAnkiety],[dbo].[DimPytania].[TworcaEmail],[dbo].[DimPytania].[DataUtworzenia],[dbo].[DimPytania].[DataModyfikacji] FROM [dbo].[DimPytania] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimPytania"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          },
+          {
+            "name": "TableWidgetSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+              "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+              "  <ColumnSuggestedType />",
+              "  <ColumnFormat />",
+              "  <ColumnAccuracy />",
+              "  <ColumnCurrencySymbol />",
+              "  <ColumnPositivePattern />",
+              "  <ColumnNegativePattern />",
+              "  <ColumnWidths>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_Pytania</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>102</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_PytaniaT</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>110</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_AnkietyT</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>110</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>NazwaAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>119</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>TrescPytania</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>113</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataRozpoczeciaAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>184</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataZakonczeniaAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>184</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>TworcaEmail</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>111</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>OpisAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>106</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataUtworzenia</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>131</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataModyfikacji</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>131</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnWidths>",
+              "  <ColumnDisplayIndex>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_Pytania</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>0</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_PytaniaT</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>1</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>ID_AnkietyT</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>2</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>NazwaAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>3</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>TrescPytania</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>4</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataRozpoczeciaAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>5</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataZakonczeniaAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>6</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>TworcaEmail</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>7</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>OpisAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>8</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataUtworzenia</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>9</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DataModyfikacji</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>10</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnDisplayIndex>",
+              "  <ColumnFrozen />",
+              "  <ColumnChecked>",
+              "    <item>",
+              "      <key>",
+              "        <string>OpisAnkiety</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>false</boolean>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnChecked>",
+              "  <ColumnFilter />",
+              "  <SelectionFilter />",
+              "  <FilterParameters />",
+              "  <IsSortDescending>false</IsSortDescending>",
+              "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "FaktOdpowiedzi",
+        "columns": [
+          {
+            "name": "ID_Pytania",
+            "dataType": "int64",
+            "sourceColumn": "ID_Pytania",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_Atrakcji",
+            "dataType": "int64",
+            "sourceColumn": "ID_Atrakcji",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_Daty",
+            "dataType": "int64",
+            "sourceColumn": "ID_Daty",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OcenaAtrakcji",
+            "dataType": "string",
+            "sourceColumn": "OcenaAtrakcji",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FaktOdpowiedzi",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[FaktOdpowiedzi].* FROM [dbo].[FaktOdpowiedzi] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[FaktOdpowiedzi].* FROM [dbo].[FaktOdpowiedzi] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FaktOdpowiedzi"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "FaktSprzedazBiletu",
+        "columns": [
+          {
+            "name": "ID_Biura",
+            "dataType": "int64",
+            "sourceColumn": "ID_Biura",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_Daty",
+            "dataType": "int64",
+            "sourceColumn": "ID_Daty",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_Klienta",
+            "dataType": "int64",
+            "sourceColumn": "ID_Klienta",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Rodzaj_Biletu",
+            "dataType": "string",
+            "sourceColumn": "Rodzaj_Biletu",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Cena",
+            "dataType": "double",
+            "sourceColumn": "Cena",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FaktSprzedazBiletu",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[FaktSprzedazBiletu].* FROM [dbo].[FaktSprzedazBiletu] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[FaktSprzedazBiletu].* FROM [dbo].[FaktSprzedazBiletu] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FaktSprzedazBiletu"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "FaktWykorzystanieAtrakcji",
+        "columns": [
+          {
+            "name": "ID_Parku",
+            "dataType": "int64",
+            "sourceColumn": "ID_Parku",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_Atrakcji",
+            "dataType": "int64",
+            "sourceColumn": "ID_Atrakcji",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_Klienta",
+            "dataType": "int64",
+            "sourceColumn": "ID_Klienta",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_Daty",
+            "dataType": "int64",
+            "sourceColumn": "ID_Daty",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DataUtworzenia",
+            "dataType": "dateTime",
+            "sourceColumn": "DataUtworzenia",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "IloscWystapien",
+            "dataType": "int64",
+            "sourceColumn": "IloscWystapien",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FaktWykorzystanieAtrakcji",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[FaktWykorzystanieAtrakcji].* FROM [dbo].[FaktWykorzystanieAtrakcji] ",
+              "dataSource": "SqlServer 194.29.170.4 ABD_GR06_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[FaktWykorzystanieAtrakcji].* FROM [dbo].[FaktWykorzystanieAtrakcji] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FaktWykorzystanieAtrakcji"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "c89b080b-6497-4f12-aba8-28acdd51476a",
+        "fromTable": "FaktOdpowiedzi",
+        "fromColumn": "ID_Atrakcji",
+        "toTable": "DimAtrakcja",
+        "toColumn": "ID_Atrakcji"
+      },
+      {
+        "name": "b99613cf-88d2-4034-a0a0-826fbf35277d",
+        "fromTable": "FaktOdpowiedzi",
+        "fromColumn": "ID_Pytania",
+        "toTable": "DimPytania",
+        "toColumn": "ID_Pytania"
+      },
+      {
+        "name": "fc7c2843-3fd6-437a-b503-a75775e7fca9",
+        "fromTable": "FaktSprzedazBiletu",
+        "fromColumn": "ID_Biura",
+        "toTable": "DimBiuro",
+        "toColumn": "ID_Biura"
+      },
+      {
+        "name": "a58ea0d3-2de8-4805-b01d-f257ee1a079b",
+        "fromTable": "FaktSprzedazBiletu",
+        "fromColumn": "ID_Klienta",
+        "toTable": "DimKlient",
+        "toColumn": "ID_Klienta"
+      },
+      {
+        "name": "e13efc64-3840-4fff-9bd3-a38354e92cef",
+        "fromTable": "FaktWykorzystanieAtrakcji",
+        "fromColumn": "ID_Atrakcji",
+        "toTable": "DimAtrakcja",
+        "toColumn": "ID_Atrakcji"
+      },
+      {
+        "name": "45fc2dfe-a9c7-4a94-9933-2e00496e4498",
+        "fromTable": "FaktWykorzystanieAtrakcji",
+        "fromColumn": "ID_Klienta",
+        "toTable": "DimKlient",
+        "toColumn": "ID_Klienta"
+      },
+      {
+        "name": "6561feb1-5397-46d3-9821-ea4c72550a99",
+        "fromTable": "FaktWykorzystanieAtrakcji",
+        "fromColumn": "ID_Parku",
+        "toTable": "DimParkRozrywki",
+        "toColumn": "ID_Parku"
+      },
+      {
+        "name": "c570397d-96aa-4d0c-8307-1dd4e7ca150b",
+        "fromTable": "DimAtrakcja",
+        "fromColumn": "DataOd",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "44a2c98e-fdd7-47ce-9ccd-62af0d6e2925",
+        "fromTable": "DimAtrakcja",
+        "fromColumn": "DataDo",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "6a156cb6-82c6-49cc-a354-c1044d7e7fa1",
+        "fromTable": "DimKlient",
+        "fromColumn": "DataDo",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "9e0e9dca-cded-4a6a-b55a-1b65f4d60897",
+        "fromTable": "DimKlient",
+        "fromColumn": "DataOd",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "0af4989c-4392-49bd-922f-6aea0238cf09",
+        "fromTable": "DimPytania",
+        "fromColumn": "DataRozpoczeciaAnkiety",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "ffc61ae4-a12f-4537-a3fc-3516d0e020b4",
+        "fromTable": "DimPytania",
+        "fromColumn": "DataZakonczeniaAnkiety",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "9649ae0e-334f-4098-ad68-c8561d6e4f36",
+        "fromTable": "DimPytania",
+        "fromColumn": "DataUtworzenia",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "3d501062-9b97-495c-87e7-bdccf475eba9",
+        "fromTable": "FaktSprzedazBiletu",
+        "fromColumn": "ID_Daty",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "328b405e-8b16-4924-abf1-2b5c39e45324",
+        "fromTable": "FaktOdpowiedzi",
+        "fromColumn": "ID_Daty",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "d72d1834-a1ce-4180-9bec-d366e3a9483a",
+        "fromTable": "DimParkRozrywki",
+        "fromColumn": "Data_Zalozenia",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName",
+        "isActive": false
+      },
+      {
+        "name": "4ae7a072-50c5-4c27-82d2-51618c5a4796",
+        "fromTable": "FaktWykorzystanieAtrakcji",
+        "fromColumn": "ID_Daty",
+        "toTable": "DimCzas",
+        "toColumn": "DataFullName"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
